@@ -13,13 +13,13 @@ class Documento:
 
 
 class DocCpf:
-    def __init__(self, documento):
+    def __init__(self, documento) -> None:
         if self.valida(documento):
             self.cpf = documento
         else:
             raise ValueError("Cpf inválido")
     
-    def __str__(self):
+    def __str__(self) -> str:
         return self.formart_cpf()
     
     def valida(self, documento):
@@ -38,7 +38,7 @@ class DocCnpj:
         else:
             raise ValueError("Cnpj inválido")
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.formart_cnpj()
 
     def valida(self, documento):
